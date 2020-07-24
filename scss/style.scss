@@ -97,3 +97,36 @@ body {
         
     }
 }
+
+
+@media only screen and (min-width: 481px) {
+}
+
+// Laptops
+@media only screen and (min-width: 769px) {
+}
+
+// Desktops
+@media only screen and (min-width: 1025px) {
+    body {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+
+        .container {
+            flex-direction: row;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+    .container .image {
+        height: 100%;
+        img {
+            object-fit: cover;
+            margin-top: 0;
+        }
+    }
+    
+}
