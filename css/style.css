@@ -6,9 +6,16 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   background-color: #ecf2f8;
+  min-height: 100vh;
 }
 
 .container {
@@ -16,6 +23,8 @@ body {
   border-radius: 10px;
   margin: 40px auto;
   width: 85%;
+  max-width: 400px;
+  min-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,11 +38,13 @@ body {
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   height: 200px;
+  min-height: 200px;
 }
 
 .container .image img {
   width: 100%;
   margin-top: -20px;
+  min-height: 200px;
 }
 
 .container .content {
@@ -112,16 +123,7 @@ body {
 }
 
 @media only screen and (min-width: 1025px) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100vh;
-  }
-  body .container {
+  .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -131,15 +133,28 @@ body {
             align-items: center;
     margin-top: 0;
     margin-bottom: 0;
-    width: 50%;
+    max-width: 730px;
   }
   .container .image {
-    height: 100%;
+    min-height: 100%;
+    height: 270px;
+    border-radius: 10px 0 0 10px;
   }
   .container .image img {
+    min-height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     margin-top: 0;
+  }
+  .container .content {
+    padding: 15px 30px;
+    min-height: 100%;
+  }
+  .container .content h3 {
+    font-size: 1.3rem;
+  }
+  .container .content p {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
